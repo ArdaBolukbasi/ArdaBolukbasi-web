@@ -1,0 +1,51 @@
+[
+    {
+        "id": "blog1",
+        "date": "Dec 2024",
+        "tech": "Python",
+        "icon": "fab fa-python",
+        "title_en": "Building Desktop Apps with CustomTkinter",
+        "title_tr": "CustomTkinter ile Masaüstü Uygulamaları",
+        "summary_en": "Modern UI design in Python is possible. Here is how I built a Car Rental Automation system...",
+        "summary_tr": "Python'da modern arayüz tasarımı mümkün. İşte Araç Kiralama Otomasyonu projemi nasıl geliştirdim...",
+        "full_text_en": "<p>Standard Tkinter looks outdated. That's why I switched to <strong>CustomTkinter</strong>...</p>",
+        "full_text_tr": "<p>Standart Tkinter eski görünüyor. Bu yüzden <strong>CustomTkinter</strong> kullanmaya karar verdim...</p>"
+    },
+    {
+        "id": "blog2",
+        "date": "Nov 2024",
+        "tech": "SQL",
+        "icon": "fas fa-database",
+        "title_en": "Why Every Developer Needs SQL",
+        "title_tr": "Neden Her Geliştirici SQL Bilmeli?",
+        "summary_en": "Relational databases are the backbone of software. My journey with IBM SQL Data Science certification...",
+        "summary_tr": "İlişkisel veritabanları yazılımın omurgasıdır. IBM SQL Veri Bilimi sertifikası sürecim...",
+        "full_text_en": "<p>SQL forces you to think in schemas...</p>",
+        "full_text_tr": "<p>SQL sizi şemalarla düşünmeye zorlar...</p>"
+    },
+    {
+        "id": "blog3",
+        "date": "Jan 2025",
+        "tech": "Java",
+        "icon": "fab fa-java",
+        "title_en": "My Java Journey",
+        "title_tr": "Java Yolculuğum",
+        "summary_en": "Learning OOP concepts with Java...",
+        "summary_tr": "Java ile OOP kavramlarını öğrenmek...",
+        "full_text_en": "<p>Java is strictly typed...</p>",
+        "full_text_tr": "<p>Java katı kurallı bir dildir...</p>"
+    }
+    ,
+    {
+        "id": "blog4",
+        "date": "Jan 2025",
+        "tech": "Java",
+        "icon": "fab fa-java",
+        "title_en": "My Java Journey",
+        "title_tr": "Java Yolculuğum",
+        "summary_en": "Learning OOP concepts with Java...",
+        "summary_tr": "Java ile OOP kavramlarını öğrenmek...",
+        "full_text_en": "<p>Java is strictly typed...</p>",
+        "full_text_tr": "<p>Java katı kurallı bir dildir...</p>"
+    }
+]
