@@ -394,7 +394,7 @@
                 
                 <div class="about-modern-wrapper">
                     <div class="about-left-col">
-                        <img src="https://avatars.githubusercontent.com/u/98939223?v=4" alt="Arda Bölükbaşı" class="profile-photo-modern">
+                        <img src="https://github.com/ArdaBolukbasi.png" alt="Arda Bölükbaşı" class="profile-photo-modern">
                         <div class="status-badge"><i class="fas fa-code"></i> Coding...</div>
                         
                         <div class="social-row">
@@ -532,82 +532,49 @@
 
         const excludedProjects = ["ArdaBolukbasi-web","ArdaBolukbasi", "TestRepo", "Demo-Project-Old"];
 
-       // --- GITHUB PROJELERİ ---
-async function loadGithubProjects() {
-    const container = document.getElementById('projectsContainer');
-    container.innerHTML = '<p style="text-align:center;">Loading Projects...</p>';
-    try {
-        // 1. Orijinal URL tanımlandı
-        const githubApiUrl = 'https://api.github.com/users/ArdaBolukbasi/repos';
-        
-        // 2. CORS sorunu için Proxy URL'si oluşturuldu
-        const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(githubApiUrl);
-        
-        // 3. Proxy üzerinden fetch işlemi yapılıyor
-        const res = await fetch(proxyUrl);
-        
-        if(!res.ok) throw new Error();
-        const repos = await res.json();
-        
-        // --- PROJE KART OLUŞTURMA KODU (BURADAN SONRASI DEĞİŞMEDİ) ---
-        let html = '';
-        const getPlaceHolder = (text) => `https://placehold.co/600x400/2c3e50/white?text=${text}`;
+        // --- GITHUB PROJELERİ ---
+        async function loadGithubProjects() {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '<p style="text-align:center;">Loading Projects...</p>';
+            try {
+                const res = await fetch('https://api.github.com/users/ArdaBolukbasi/repos');
+                if(!res.ok) throw new Error();
+                const repos = await res.json();
+                
+                const featured = repos.find(r => r.name === 'Car-Rental-Automation');
+                let html = '';
+                const getPlaceHolder = (text) => `https://placehold.co/600x400/2c3e50/white?text=${text}`;
 
-        const createCard = (repo) => {
-            const imgUrl = projectImages[repo.name] || getPlaceHolder(repo.name);
-            return `<div class="project-card">
-                <img src="${imgUrl}" alt="${repo.name}" class="project-img">
-                <div class="project-content">
-                    <h3>${repo.name}</h3>
-                    <p>${repo.description || 'Software project developed with Python & SQL.'}</p>
-                    <div style="margin-top:auto;">
-                        <span style="font-size:0.8rem; opacity:0.6;"><i class="fas fa-circle" style="font-size:8px;"></i> ${repo.language || 'Code'}</span>
-                        <a href="${repo.html_url}" target="_blank" class="project-link" style="display:block; margin-top:15px;">View Code</a>
-                    </div>
-                </div>
-            </div>`;
-        };
+                const createCard = (repo) => {
+                    const imgUrl = projectImages[repo.name] || getPlaceHolder(repo.name);
+                    return `<div class="project-card">
+                        <img src="${imgUrl}" alt="${repo.name}" class="project-img">
+                        <div class="project-content">
+                            <h3>${repo.name}</h3>
+                            <p>${repo.description || 'Software project developed with Python & SQL.'}</p>
+                            <div style="margin-top:auto;">
+                                <span style="font-size:0.8rem; opacity:0.6;"><i class="fas fa-circle" style="font-size:8px;"></i> ${repo.language || 'Code'}</span>
+                                <a href="${repo.html_url}" target="_blank" class="project-link" style="display:block; margin-top:15px;">View Code</a>
+                            </div>
+                        </div>
+                    </div>`;
+                };
 
-        const excludedProjects = ["ArdaBolukbasi-web","ArdaBolukbasi", "TestRepo", "Demo-Project-Old"];
-        const featured = repos.find(r => r.name === 'Car-Rental-Automation');
-
-        if(featured) html += createCard(featured);
-        let count = 0;
-        repos.forEach(repo => {
-            if (excludedProjects.includes(repo.name)) return;
-            if(repo.name !== 'Car-Rental-Automation' && !repo.fork && count < 5) {
-                html += createCard(repo);
-                count++;
+                if(featured) html += createCard(featured);
+                let count = 0;
+                repos.forEach(repo => {
+                    if (excludedProjects.includes(repo.name)) return;
+                    if(repo.name !== 'Car-Rental-Automation' && !repo.fork && count < 5) {
+                        html += createCard(repo);
+                        count++;
+                    }
+                });
+                if(html === '') html = '<p>No projects found.</p>';
+                container.innerHTML = html;
+            } catch(e) { 
+                container.innerHTML = `<p style="text-align:center;color:red;">GitHub Connection Error. Please try again later.</p>`; 
             }
-        });
-        if(html === '') html = '<p>No projects found.</p>';
-        container.innerHTML = html;
-        
-    } catch(e) { 
-        container.innerHTML = `<p style="text-align:center;color:red;">GitHub Bağlantı Hatası. Lütfen daha sonra tekrar deneyin.</p>`; 
-    }
-}
-
-        const excludedProjects = ["ArdaBolukbasi-web","ArdaBolukbasi", "TestRepo", "Demo-Project-Old"];
-        const featured = repos.find(r => r.name === 'Car-Rental-Automation');
-
-        if(featured) html += createCard(featured);
-        let count = 0;
-        repos.forEach(repo => {
-            if (excludedProjects.includes(repo.name)) return;
-            if(repo.name !== 'Car-Rental-Automation' && !repo.fork && count < 5) {
-                html += createCard(repo);
-                count++;
-            }
-        });
-        if(html === '') html = '<p>No projects found.</p>';
-        container.innerHTML = html;
-        
-    } catch(e) { 
-        // Hata mesajı:
-        container.innerHTML = `<p style="text-align:center;color:red;">GitHub Bağlantı Hatası. Lütfen daha sonra tekrar deneyin.</p>`; 
-    }
-}
+        }
 
         // --- BLOG YÖNETİMİ (METİN TABANLI KARTLAR) ---
         let blogData = [];
