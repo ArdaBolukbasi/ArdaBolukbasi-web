@@ -1,51 +1,41 @@
 [
     {
-        "id": "blog1",
-        "date": "Dec 2024",
-        "tech": "Python",
+        "id": "python-customtkinter",
         "icon": "fab fa-python",
-        "title_en": "Building Desktop Apps with CustomTkinter",
-        "title_tr": "CustomTkinter ile Masaüstü Uygulamaları",
-        "summary_en": "Modern UI design in Python is possible. Here is how I built a Car Rental Automation system...",
-        "summary_tr": "Python'da modern arayüz tasarımı mümkün. İşte Araç Kiralama Otomasyonu projemi nasıl geliştirdim...",
-        "full_text_en": "<p>Standard Tkinter looks outdated. That's why I switched to <strong>CustomTkinter</strong>...</p>",
-        "full_text_tr": "<p>Standart Tkinter eski görünüyor. Bu yüzden <strong>CustomTkinter</strong> kullanmaya karar verdim...</p>"
+        "tech": "Python & UI",
+        "date": "Dec 10, 2024",
+        "title_en": "Building Modern Desktop Apps with Python & CustomTkinter",
+        "summary_en": "Why I chose CustomTkinter over standard Tkinter for my Car Rental project and the power of OOP in UI design.",
+        "full_text_en": "<p>When I started my <strong>Car Rental Automation</strong> project, I realized that the standard Tkinter library in Python looked a bit... '90s'. As a developer who cares about User Experience (UX), I wanted something modern, dark-mode friendly, and scalable.</p><h4>Why CustomTkinter?</h4><p>CustomTkinter allows us to create modern UI elements similar to what we see in Windows 11 or macOS. It supports rounded corners, smooth animations, and high-DPI scaling automatically.</p><h4>The Challenge of OOP</h4><p>Building a complex app isn't just about dragging buttons. I structured my project using <strong>Object-Oriented Programming (OOP)</strong>. Each page (Customer Management, Vehicle List) is a separate class. This makes the code readable and easy to debug.</p><p>This project taught me that Python isn't just for scripts; it's a powerful tool for full-scale application development.</p>",
+        
+        "title_tr": "Python ve CustomTkinter ile Modern Masaüstü Uygulamaları",
+        "summary_tr": "Araç Kiralama projemde neden standart Tkinter yerine CustomTkinter'ı seçtim ve UI tasarımında OOP'nin gücü.",
+        "full_text_tr": "<p><strong>Araç Kiralama Otomasyonu</strong> projeme başladığımda, Python'un standart Tkinter kütüphanesinin görünümünün biraz... '90'lardan kalma' olduğunu fark ettim. Kullanıcı Deneyimine (UX) önem veren bir geliştirici olarak, modern, karanlık mod (dark mode) destekli ve ölçeklenebilir bir yapı istedim.</p><h4>Neden CustomTkinter?</h4><p>CustomTkinter, Windows 11 veya macOS'ta gördüğümüze benzer modern arayüz elementleri oluşturmamızı sağlıyor. Yuvarlatılmış köşeler, yumuşak geçişler ve yüksek çözünürlük desteği sunuyor.</p><h4>OOP ile Mimari Kurmak</h4><p>Karmaşık bir uygulama geliştirmek sadece butonları yerleştirmek değildir. Projemi <strong>Nesne Yönelimli Programlama (OOP)</strong> kullanarak kurguladım. Her sayfa (Müşteri Yönetimi, Araç Listesi) ayrı birer sınıf (class) olarak tasarlandı. Bu sayede kod hem okunabilir hem de yönetilebilir hale geldi.</p><p>Bu proje bana Python'un sadece basit scriptler için değil, profesyonel masaüstü uygulamaları için de ne kadar güçlü olduğunu öğretti.</p>"
     },
     {
-        "id": "blog2",
-        "date": "Nov 2024",
-        "tech": "SQL",
+        "id": "sql-data-science",
         "icon": "fas fa-database",
-        "title_en": "Why Every Developer Needs SQL",
-        "title_tr": "Neden Her Geliştirici SQL Bilmeli?",
-        "summary_en": "Relational databases are the backbone of software. My journey with IBM SQL Data Science certification...",
-        "summary_tr": "İlişkisel veritabanları yazılımın omurgasıdır. IBM SQL Veri Bilimi sertifikası sürecim...",
-        "full_text_en": "<p>SQL forces you to think in schemas...</p>",
-        "full_text_tr": "<p>SQL sizi şemalarla düşünmeye zorlar...</p>"
+        "tech": "SQL & Data",
+        "date": "Nov 25, 2024",
+        "title_en": "Why SQL is Still King in the Era of AI",
+        "summary_en": "Reflecting on my IBM SQL for Data Science certification: Why understanding databases is crucial before jumping into AI.",
+        "full_text_en": "<p>Everyone is talking about Artificial Intelligence and Machine Learning today. But there is a hidden hero behind every successful AI model: <strong>Data.</strong> And the language of data is SQL.</p><h4>My Takeaways from IBM Certification</h4><p>While completing the <em>Databases and SQL for Data Science</em> course by IBM, I learned that knowing Python is not enough. You need to know how to talk to databases effectively. Queries, Joins, and relational logic are the foundations of backend development.</p><p>Before building a skyscraper (AI model), you need a solid foundation (Clean Data). SQL is the tool that ensures your foundation is strong. That's why I prioritize database design in all my projects.</p>",
+        
+        "title_tr": "Yapay Zeka Çağında SQL Neden Hâlâ Kral?",
+        "summary_tr": "IBM Data Science için SQL sertifikamdan çıkarımlarım: Yapay zekaya atlamadan önce veritabanlarını anlamak neden hayati?",
+        "full_text_tr": "<p>Bugün herkes Yapay Zeka ve Makine Öğrenmesi konuşuyor. Ancak her başarılı yapay zeka modelinin arkasında gizli bir kahraman var: <strong>Veri.</strong> Ve verinin konuştuğu dil SQL'dir.</p><h4>IBM Sertifikasından Öğrendiklerim</h4><p>IBM'in <em>Databases and SQL for Data Science</em> kursunu tamamlarken şunu fark ettim: Sadece Python bilmek yetmez. Veritabanlarıyla etkili bir şekilde konuşmayı bilmelisiniz. Sorgular (Queries), Birleştirmeler (Joins) ve ilişkisel mantık, backend geliştirmenin temelidir.</p><p>Bir gökdelen (AI modeli) inşa etmeden önce, sağlam bir temele (Temiz Veri) ihtiyacınız vardır. SQL, bu temelin sağlam olmasını sağlayan araçtır. Bu yüzden projelerimde veritabanı tasarımına öncelik veriyorum.</p>"
     },
     {
-        "id": "blog3",
-        "date": "Jan 2025",
-        "tech": "Java",
-        "icon": "fab fa-java",
-        "title_en": "My Java Journey",
-        "title_tr": "Java Yolculuğum",
-        "summary_en": "Learning OOP concepts with Java...",
-        "summary_tr": "Java ile OOP kavramlarını öğrenmek...",
-        "full_text_en": "<p>Java is strictly typed...</p>",
-        "full_text_tr": "<p>Java katı kurallı bir dildir...</p>"
-    }
-    ,
-    {
-        "id": "blog4",
-        "date": "Jan 2025",
-        "tech": "Java",
-        "icon": "fab fa-java",
-        "title_en": "My Java Journey",
-        "title_tr": "Java Yolculuğum",
-        "summary_en": "Learning OOP concepts with Java...",
-        "summary_tr": "Java ile OOP kavramlarını öğrenmek...",
-        "full_text_en": "<p>Java is strictly typed...</p>",
-        "full_text_tr": "<p>Java katı kurallı bir dildir...</p>"
+        "id": "ai-essentials",
+        "icon": "fas fa-robot",
+        "tech": "AI & Future",
+        "date": "Dec 05, 2024",
+        "title_en": "Using AI as a Junior Developer: Cheating or Accelerating?",
+        "summary_en": "How I integrate Google AI tools into my workflow to learn faster, not to skip the learning process.",
+        "full_text_en": "<p>There is a big debate: <em>'Will AI replace programmers?'</em> As a software development student who recently completed the <strong>Google AI Essentials</strong> course, my answer is: No, but programmers who use AI will replace those who don't.</p><h4>How I Use AI?</h4><ul><li><strong>Debugging:</strong> Instead of staring at an error for hours, I ask AI to explain <em>why</em> it happened. This turns a bug into a learning moment.</li><li><strong>Brainstorming:</strong> I use AI to generate ideas for database schemas or UI layouts.</li><li><strong>Optimization:</strong> I ask AI, 'How can I make this Python loop more efficient?'</li></ul><p>For me, AI is not a tool to cheat on homework; it's a mentor that is available 24/7. It accelerates my learning curve and allows me to focus on logic rather than syntax errors.</p>",
+        
+        "title_tr": "Junior Geliştirici Olarak Yapay Zeka Kullanımı: Hile mi, Hızlanma mı?",
+        "summary_tr": "Google AI araçlarını iş akışıma nasıl entegre ediyorum? Öğrenme sürecini atlamak için değil, daha hızlı öğrenmek için.",
+        "full_text_tr": "<p>Büyük bir tartışma var: <em>'Yapay zeka yazılımcıların yerini alacak mı?'</em> Yakın zamanda <strong>Google AI Essentials</strong> kursunu tamamlamış bir yazılım öğrencisi olarak cevabım şu: Hayır, ancak yapay zekayı kullanan yazılımcılar, kullanmayanların yerini alacak.</p><h4>AI'yı Nasıl Kullanıyorum?</h4><ul><li><strong>Hata Ayıklama (Debugging):</strong> Bir hataya saatlerce bakmak yerine, AI'ya hatanın <em>neden</em> kaynaklandığını soruyorum. Bu, hatayı bir öğrenme fırsatına dönüştürüyor.</li><li><strong>Beyin Fırtınası:</strong> Veritabanı şemaları veya UI düzenleri için fikir üretmekte kullanıyorum.</li><li><strong>Optimizasyon:</strong> 'Bu Python döngüsünü nasıl daha verimli hale getirebilirim?' diye sorarak kod kalitemi artırıyorum.</li></ul><p>Benim için AI, ödevleri yaptıracak bir araç değil; 7/24 ulaşılabilir bir mentordur. Öğrenme eğrimi hızlandırıyor ve sözdizimi hatalarından ziyade mantığa odaklanmamı sağlıyor.</p>"
     }
 ]

@@ -276,6 +276,28 @@
             .reader-container { padding: 30px 20px; }
             #blog-reader { padding: 60px 10px; }
         }
+
+        /* --- CV VIEWER (YENİ EKLENEN) --- */
+        #cv-viewer {
+            display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-color); z-index: 2000; overflow-y: auto; padding: 80px 20px;
+        }
+        .cv-display-container {
+            max-width: 900px; margin: 0 auto; background: var(--card-bg); 
+            padding: 40px; border-radius: 8px; box-shadow: var(--shadow);
+            display: flex; flex-direction: column; align-items: center; height: 85vh;
+        }
+        .cv-frame {
+            width: 100%; flex-grow: 1; border: none; border-radius: 4px; background: #eee;
+        }
+        .cv-download-btn {
+            margin-top: 20px; text-decoration: none; display: inline-block;
+        }
+        
+        @media (max-width: 768px) {
+            .cv-display-container { padding: 15px; height: 80vh; }
+        }
+        
     </style>
 </head>
 <body>
@@ -318,7 +340,10 @@
                 <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Istanbul</span>
             </div>
 
-            <a href="cv.pdf" download class="cv-btn"><i class="fas fa-download"></i> <span data-lang="btn_cv">Download CV</span></a>
+            <button onclick="openCV()" class="cv-btn" style="border:none; cursor:pointer; font-size:1rem;">
+                <i class="fas fa-eye"></i> <span data-lang="btn_view_cv">View CV</span>
+            </button>
+            
         </div>
 
         <div class="main-container">
@@ -428,7 +453,7 @@
                         </form>
                         <div style="display:flex; flex-direction:column; justify-content:center;">
                             <h3 style="margin-bottom:20px;" data-lang="info_title">Contact Info</h3>
-                            <p style="margin-bottom:15px;"><i class="fas fa-envelope" style="color:var(--primary); width:30px;"></i> arda8597@gmail.com</p>
+                            <p style="margin-bottom:15px;"><i class="fas fa-envelope" style="color:var(--primary); width:30px;"></i> info@ardabolukbasi.com</p>
                             <p style="margin-bottom:15px;"><i class="fas fa-map-marker-alt" style="color:var(--primary); width:30px;"></i> Istanbul, Turkey</p>
                             <div style="margin-top:30px; display:flex; gap:20px;">
                                 <a href="https://github.com/ArdaBolukbasi" target="_blank" style="font-size:2.5rem; color:var(--text-color);"><i class="fab fa-github"></i></a>
@@ -442,9 +467,17 @@
         </div>
     </div>
 
-    <div id="blog-reader">
-        <button class="back-btn" onclick="closeBlog()"><i class="fas fa-arrow-left"></i> <span data-lang="back_home">Back to Home</span></button>
-        <div class="reader-container" id="readerContainer"></div>
+    <div id="cv-viewer">
+        <button class="back-btn" onclick="closeCV()">
+            <i class="fas fa-arrow-left"></i> <span data-lang="back_home">Back to Home</span>
+        </button>
+        
+        <div class="cv-display-container">
+            <iframe src="cv.pdf" class="cv-frame"></iframe>
+            <a href="cv.pdf" download class="cv-btn cv-download-btn">
+                <i class="fas fa-download"></i> <span data-lang="btn_download_cv">Download PDF</span>
+            </a>
+        </div>
     </div>
 
     <script>
@@ -638,7 +671,7 @@
         const translations = {
             en: {
                 nav_about: "About", nav_projects: "Projects", nav_certs: "Certificates", nav_blog: "Blog", nav_contact: "Contact",
-                hero_uni: "Istanbul Aydin University", btn_cv: "Download CV",
+                hero_uni: "Istanbul Aydin University", btn_view_cv: "View CV", btn_download_cv: "Download PDF",
                 title_about: "About Me", title_projects: "My Projects", title_certs: "Certificates", title_contact: "Contact",
                 hello: "Hello! 👋", 
 
@@ -660,7 +693,7 @@
             },
             tr: {
                 nav_about: "Hakkımda", nav_projects: "Projeler", nav_certs: "Sertifikalar", nav_blog: "Blog", nav_contact: "İletişim",
-                hero_uni: "İstanbul Aydın Üniversitesi", btn_cv: "CV İndir",
+                hero_uni: "İstanbul Aydın Üniversitesi", btn_view_cv: "CV Görüntüle",btn_download_cv: "PDF İndir",
                 title_about: "Hakkımda", title_projects: "Projelerim", title_certs: "Sertifikalarım", title_contact: "İletişim",
                 hello: "Merhaba! 👋", 
 
@@ -768,6 +801,20 @@
                 // Mesajı 5 saniye sonra gizle
                 setTimeout(() => successMsg.style.display = 'none', 5000);
             }
+        }
+        // --- CV GÖRÜNTÜLEME FONKSİYONLARI ---
+        function openCV() {
+            document.getElementById('main-content').style.display = 'none';
+            document.querySelector('nav').style.display = 'none';
+            document.getElementById('cv-viewer').style.display = 'block';
+            window.scrollTo(0,0);
+        }
+
+        function closeCV() {
+            document.getElementById('cv-viewer').style.display = 'none';
+            document.getElementById('main-content').style.display = 'block';
+            document.querySelector('nav').style.display = 'block';
+            if(window.innerWidth <= 768) { document.querySelector('.nav-controls').style.display = 'none'; }
         }
 
         window.onload = function() {
