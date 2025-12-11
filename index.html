@@ -534,11 +534,18 @@
         const excludedProjects = ["ArdaBolukbasi-web","ArdaBolukbasi", "TestRepo", "Demo-Project-Old"];
 
         // --- GITHUB PROJELERİ ---
+        // --- GITHUB PROJELERİ ---
         async function loadGithubProjects() {
             const container = document.getElementById('projectsContainer');
             container.innerHTML = '<p style="text-align:center;">Loading Projects...</p>';
             try {
-                const res = await fetch('https://api.github.com/users/ArdaBolukbasi/repos');
+                // Hata veren URL, CORS dostu proxy ile düzeltildi:
+                const githubApiUrl = 'https://api.github.com/users/ArdaBolukbasi/repos';
+                // Corsproxy.io servisi kullanılarak API linki güvenli bir şekilde encode edildi.
+                const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(githubApiUrl);
+                
+                const res = await fetch(proxyUrl);
+                
                 if(!res.ok) throw new Error();
                 const repos = await res.json();
                 
@@ -560,6 +567,22 @@
                         </div>
                     </div>`;
                 };
+
+                if(featured) html += createCard(featured);
+                let count = 0;
+                repos.forEach(repo => {
+                    if (excludedProjects.includes(repo.name)) return;
+                    if(repo.name !== 'Car-Rental-Automation' && !repo.fork && count < 5) {
+                        html += createCard(repo);
+                        count++;
+                    }
+                });
+                if(html === '') html = '<p>No projects found.</p>';
+                container.innerHTML = html;
+            } catch(e) { 
+                container.innerHTML = `<p style="text-align:center;color:red;">GitHub Connection Error. Please try again later.</p>`; 
+            }
+        }
 
                 if(featured) html += createCard(featured);
                 let count = 0;
