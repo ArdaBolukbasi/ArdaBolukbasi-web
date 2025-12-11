@@ -10,24 +10,24 @@
   <br>
 
   <table width="90%" style="border-collapse: collapse;">
-      <tr>
-          <td width="50%" align="center" style="padding: 10px;">
-              <h4 style="color:#222; margin-bottom: 10px;">☀️ LIGHT MODE</h4>
-              <a href="https://ardabolukbasi.com/" target="_blank">
-              <img src="about.jpg" alt="Portfolio Light Mode" style="max-width: 95%; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-          </td>
-          <td width="50%" align="center" style="padding: 10px;">
-              <h4 style="color:#222; margin-bottom: 10px;">🌙 DARK MODE</h4>
-              <a href="https://ardabolukbasi.com/" target="_blank">
-              <img src="darkproject.jpg" alt="Portfolio Dark Mode" style="max-width: 95%; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-          </td>
-      </tr>
+    <tr>
+      <td width="50%" align="center" style="padding: 10px;">
+          <h4 style="color:#222; margin-bottom: 10px;">☀️ LIGHT MODE</h4>
+          <a href="https://ardabolukbasi.com/" target="_blank">
+          <img src="about.jpg" alt="Portfolio Light Mode" style="max-width: 95%; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </td>
+      <td width="50%" align="center" style="padding: 10px;">
+          <h4 style="color:#222; margin-bottom: 10px;">🌙 DARK MODE</h4>
+          <a href="https://ardabolukbasi.com/" target="_blank">
+          <img src="darkproject.jpg" alt="Portfolio Dark Mode" style="max-width: 95%; border-radius: 6px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+      </td>
+    </tr>
   </table>
   
   <br>
 
   <a href="https://ardabolukbasi.com" target="_blank">
-    <img src="https://img.shields.io/badge/VIEW_LIVE_PORTFOLIO-ARDA%20BOLUKBASI-181717?style=for-the-badge&logo=vercel&logoColor=white&labelColor=222222" height="40" alt="Visit Live Website">
+    <img src="https://img.shields.io/badge/VIEW_LIVE_PORTFOLIO-CLOUDFLARE_PAGES-F38020?style=for-the-badge&logo=cloudflare&logoColor=white&labelColor=222222" height="40" alt="Visit Live Website">
   </a>
   
 </div>
@@ -68,7 +68,7 @@
 
 <br><hr><br>
 
-<h3>👤  Portfolio Subsections </h3>
+<h3>👤 Portfolio Subsections </h3>
 
 <table width="90%" style="border-collapse: collapse; margin-top: 20px;">
     <tr>
@@ -90,26 +90,26 @@
 <h3>📂 Featured Projects</h3>
 <p>The projects below demonstrate mastery across different development sectors:</p>
 <table width="100%">
-  <tr>
-    <td width="33%" align="center">
-      <a href="https://github.com/ArdaBolukbasi/Car-Rental-Automation" target="_blank">
-        <h4 style="color:#007bff;">Desktop Application</h4>
-        <p><em>Python & CustomTkinter UI</em></p>
-      </a>
-    </td>
-    <td width="33%" align="center">
-      <a href="https://github.com/ArdaBolukbasi/Edarch-Portfolio-Interactive" target="_blank">
-        <h4 style="color:#ff8c00;">Web Animation Logic</h4>
-        <p><em>Turn.js Integration & jQuery</em></p>
-      </a>
-    </td>
-    <td width="33%" align="center">
-      <a href="https://github.com/ArdaBolukbasi/Edarch-Studio-Corporate" target="_blank">
-        <h4 style="color:#00a38f;">Client Management</h4>
-        <p><em>No-Code Consulting & Deployment</em></p>
-      </a>
-    </td>
-  </tr>
+    <tr>
+        <td width="33%" align="center">
+          <a href="https://github.com/ArdaBolukbasi/Car-Rental-Automation" target="_blank">
+                <h4 style="color:#007bff;">Desktop Application</h4>
+                <p><em>Python & CustomTkinter UI</em></p>
+            </a>
+        </td>
+        <td width="33%" align="center">
+          <a href="https://github.com/ArdaBolukbasi/Edarch-Portfolio-Interactive" target="_blank">
+                <h4 style="color:#ff8c00;">Web Animation Logic</h4>
+                <p><em>Turn.js Integration & jQuery</em></p>
+            </a>
+        </td>
+        <td width="33%" align="center">
+          <a href="https://github.com/ArdaBolukbasi/Edarch-Studio-Corporate" target="_blank">
+                <h4 style="color:#00a38f;">Client Management</h4>
+                <p><em>No-Code Consulting & Deployment</em></p>
+            </a>
+        </td>
+    </tr>
 </table>
 
 <br>
