@@ -376,7 +376,7 @@
             
             <div class="hero-badges">
                 <span class="hero-badge"><i class="fas fa-university"></i> <span data-lang="hero_uni">Istanbul Aydin University</span></span>
-                <span class="hero-badge"><i class="fas fa-code"></i> Python & SQL</span>
+                <span class="hero-badge"><i class="fas fa-code"></i> Web & Python & SQL</span>
                 <span class="hero-badge"><i class="fas fa-map-marker-alt"></i> Istanbul</span>
             </div>
 
@@ -408,27 +408,22 @@
                         
                         <div class="about-text">
                             <div data-lang="about_content">
-                                <p>
-                                    I am a forward-thinking Software Development student at <strong>Istanbul Aydin University</strong>. My passion lies in engineering robust software solutions that solve real-world problems. I don't just write code; I design systems.
-                                </p>
-                                <p style="margin-top:15px;">
-                                    Specializing in <strong>Python</strong> and <strong>Database Management (SQL)</strong>, I develop professional desktop applications and automate complex workflows. My approach combines clean architecture with efficient data handling.
-                                </p>
+                                    <p>I am Arda, a 2nd-year Software Development student at Istanbul Aydin University. To be honest, I cannot say I know everything but I believe no problem is unsolvable, and I quickly adapt to the necessary technologies.</p><br><p><strong>My Strategic Approach:</strong> My priority is to provide the best system for the user. I write code if necessary. However, if the project's sole requirement is for the client to easily manage content without technical knowledge, I then turn to strategic No-Code solutions that provide unlimited and autonomous control.</p>
                             </div>
                         </div>
 
                         <div class="stats-row">
                             <div class="stat-item">
-                                <span class="stat-number">2+</span>
-                                <span class="stat-label">Years Coding</span>
+                                <span class="stat-number" data-lang="stat_years_num">2</span>
+                                <span class="stat-label" data-lang="stat_years_label">Years Coding</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">Projects</span>
+                                <span class="stat-number" data-lang="stat_projects_num">4</span>
+                                <span class="stat-label" data-lang="stat_projects_label">Projects</span>
                             </div>
                             <div class="stat-item">
-                                <span class="stat-number">3</span>
-                                <span class="stat-label">Certificates</span>
+                                <span class="stat-number" data-lang="stat_certs_num">3</span>
+                                <span class="stat-label" data-lang="stat_certs_label">Certificates</span>
                             </div>
                         </div>
 
@@ -437,6 +432,7 @@
                             <div class="tech-item-modern"><i class="fas fa-database"></i> SQL</div>
                             <div class="tech-item-modern"><i class="fab fa-java"></i> Java</div>
                             <div class="tech-item-modern"><i class="fas fa-brain"></i> AI</div>
+                            <div class="tech-item-modern"><i class="fab fa-html5"></i> HTML</div>
                         </div>
                     </div>
                 </div>
@@ -463,9 +459,9 @@
                         <a href="https://www.coursera.org/account/accomplishments/verify/2YRH8E4MU7JG" target="_blank" class="cert-btn">View Credential</a>
                     </div>
                     <div class="card certificate-card">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/Coursera-Logo_600x600.svg" alt="Coursera" class="cert-logo">
-                        <h3>Google UX/UI</h3>
-                        <p style="font-size:0.9rem; opacity:0.7; margin:10px 0;" data-lang="cert_desc3">Foundations of UX Design</p>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" class="cert-logo">
+                        <h3>Google Design Prompts</h3>
+                        <p style="font-size:0.9rem; opacity:0.7; margin:10px 0;" data-lang="cert_desc3">Design Prompts for Everyday Work Tasks</p>
                         <a href="https://www.coursera.org/account/accomplishments/verify/OTUW1G8L2QUP" target="_blank" class="cert-btn">View Credential</a>
                     </div>
                 </div>
@@ -529,11 +525,11 @@
         // --- PROJE RESİMLERİ ---
         const projectImages = {
             "Car-Rental-Automation": "https://github.com/ArdaBolukbasi/ArdaBolukbasi/raw/main/Car_Renting_Panel.jpg",
-            "ArdaBolukbasi": "https://github.com/ArdaBolukbasi/ArdaBolukbasi/raw/main/banner.jpg",
-            "ArdaBolukbasi-web": "https://raw.githubusercontent.com/ArdaBolukbasi/ArdaBolukbasi/output/github-contribution-grid-snake-dark.svg",
+            "Edarch-Studio":"https://github.com/ArdaBolukbasi/Edarch-Studio/raw/main/Home.png",
+            "Edarch-Portfolio-Interactive":"https://github.com/ArdaBolukbasi/Edarch-Portfolio-Interactive/blob/main/portf/1.jpg?raw=true",
         };
 
-        const excludedProjects = ["ArdaBolukbasi-web", "TestRepo", "Demo-Project-Old"];
+        const excludedProjects = ["ArdaBolukbasi-web","ArdaBolukbasi", "TestRepo", "Demo-Project-Old"];
 
         // --- GITHUB PROJELERİ ---
         async function loadGithubProjects() {
@@ -715,10 +711,13 @@
                 title_about: "About Me", title_projects: "My Projects", title_certs: "Certificates", title_contact: "Contact",
                 about_subtitle: "Software Developer Student",
                 about_maintitle: "Building Scalable Solutions with Python & Data Science",
-                about_content: `<p>Hello! I'm Arda, a 2nd-year Software Development student at Istanbul Aydin University. I firmly believe that software goes beyond textbooks, which is why I immediately put what I learn into practice.</p><p style="margin-top:15px;">My core focus is on Python, known for its automation power, combined with SQL, the foundation of data management. Currently, I am concentrating on building professional desktop applications using CustomTkinter.</p>`,
-                cert_desc1: "AI Essentials & Fundamentals", cert_desc2: "Databases and SQL for Data Science", cert_desc3: "Foundations of UX Design",
+                about_content: `<p>I am Arda, a 2nd-year Software Development student at Istanbul Aydin University. To be honest, I cannot say I know everything but I believe no problem is unsolvable, and I quickly adapt to the necessary technologies.</p><br><p><strong>My Strategic Approach:</strong> My priority is to provide the best system for the user. I write code if necessary. However, if the project's sole requirement is for the client to easily manage content without technical knowledge, I then turn to strategic No-Code solutions that provide unlimited and autonomous control.`,
+                cert_desc1: "AI Essentials & Fundamentals", cert_desc2: "Databases and SQL for Data Science", cert_desc3: "Foundations of Design Prompts",
                 msg_title: "Send Message", btn_send: "Send Message", info_title: "Contact Info",
-                back_home: "Back to Home", read_article: "Read Article"
+                back_home: "Back to Home", read_article: "Read Article",
+                stat_years_num: "2+", stat_years_label: "Years Coding",
+                stat_projects_num: "4", stat_projects_label: "Projects",
+                stat_certs_num: "3", stat_certs_label: "Certificates",
             },
             tr: {
                 nav_about: "Hakkımda", nav_projects: "Projeler", nav_certs: "Sertifikalar", nav_blog: "Blog", nav_contact: "İletişim",
@@ -726,10 +725,13 @@
                 title_about: "Hakkımda", title_projects: "Projelerim", title_certs: "Sertifikalarım", title_contact: "İletişim",
                 about_subtitle: "Yazılım Geliştirme Öğrencisi",
                 about_maintitle: "Python ve Veri Bilimi ile Ölçeklenebilir Çözümler Geliştirme",
-                about_content: `<p>Merhaba! Ben Arda, İstanbul Aydın Üniversitesi Yazılım Geliştirme Bölümü'nde 2. sınıf öğrencisiyim. Yazılımın sadece ders kitaplarında kalmadığına inanıyor ve bu yüzden öğrendiklerimi hemen uygulamaya döküyorum.</p><p style="margin-top:15px;">Uzmanlık alanım, veri yönetiminin temeli olan SQL ile otomasyon gücü yüksek Python. Şu sıralar CustomTkinter kullanarak profesyonel masaüstü uygulamaları geliştirmeye odaklanıyorum.</p>`,
-                cert_desc1: "Yapay Zeka Temelleri", cert_desc2: "Veri Bilimi için SQL", cert_desc3: "UX Tasarım Temelleri",
+                about_content: `<p>Ben Arda, İstanbul Aydın Üniversitesi Yazılım Geliştirme Bölümü'nde 2. sınıf öğrencisiyim. Dürüst olmak gerekirse, "her şeyi biliyorum" diyemem ancak çözülemeyecek bir problem olduğuna inanmıyorum ve gerekli teknolojilere hızla adapte olurum.</p><br><p><strong>Stratejik Yaklaşımım:</strong> Benim önceliğim kullanıcıya en iyi sistemi sağlamaktır. Gerekirse sıfırdan kod yazarım. Ancak, projenin tek ihtiyacı müşterinin teknik bilgi olmadan kolayca içerik yönetmesi ise, bu durumda sınırsız ve otonom kontrol sağlayan stratejik No-Code çözümleri de devreye sokarım.</p>`,
+                cert_desc1: "Yapay Zeka Temelleri", cert_desc2: "Veri Bilimi için SQL", cert_desc3: "Tasarım Komutlarının Temelleri",
                 msg_title: "Mesaj Gönder", btn_send: "Gönder", info_title: "İletişim Bilgileri",
-                back_home: "Ana Sayfaya Dön", read_article: "Yazıyı Oku"
+                back_home: "Ana Sayfaya Dön", read_article: "Yazıyı Oku",
+                stat_years_num: "2+", stat_years_label: "Yıl Deneyim",
+                stat_projects_num: "4", stat_projects_label: "Proje",
+                stat_certs_num: "3", stat_certs_label: "Sertifika",
             }
         };
 
