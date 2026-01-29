@@ -1,0 +1,41 @@
+[
+  {
+    "id": "1769703088945",
+    "title": "CV Analysis",
+    "title_tr": "CV Analiz",
+    "category": "Web Development",
+    "image": "https://github.com/ArdaBolukbasi/cvanaliz/raw/main/static/favicon.png",
+    "gallery": [],
+    "description": "AI-powered CV analysis and scoring system that helps evaluate resumes professionally.",
+    "description_tr": "Yapay zeka destekli CV analizi ve puanlama sistemi, özgeçmişleri profesyonel olarak değerlendirmeye yardımcı olur.",
+    "githubUrl": "https://github.com/ArdaBolukbasi/cvanaliz",
+    "demoUrl": "https://cvanaliz.com.tr/",
+    "technologies": [
+      "Python",
+      "Flask",
+      "AI",
+      "PDF"
+    ]
+  },
+  {
+    "id": "1769703997536",
+    "title": "Edarch Studio",
+    "title_tr": "Edarch Stüdyo",
+    "category": "Web Development",
+    "image": "https://github.com/ArdaBolukbasi/Edarch-Studio/raw/main/Home.png",
+    "gallery": [
+      "https://github.com/ArdaBolukbasi/Edarch-Studio/raw/main/Works.png",
+      "https://github.com/ArdaBolukbasi/Edarch-Studio/raw/main/about.png",
+      "https://github.com/ArdaBolukbasi/Edarch-Studio/raw/main/Contact.png"
+    ],
+    "description": "Modern architecture studio website with stunning visuals and smooth animations.",
+    "description_tr": "Çarpıcı görseller ve akıcı animasyonlarla modern mimarlık stüdyosu web sitesi.",
+    "githubUrl": "https://github.com/ArdaBolukbasi/Edarch-Studio",
+    "demoUrl": "https://edarch.studio/",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ]
+  }
+]

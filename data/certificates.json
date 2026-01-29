@@ -1,0 +1,35 @@
+[
+  {
+    "id": "1769711118928",
+    "title": "Databases and SQL for Data Science with Python",
+    "title_tr": "Python ile Veri Bilimi için Veritabanları ve SQL",
+    "issuer": "IBM",
+    "issuer_tr": "IBM",
+    "date": "December 7, 2025",
+    "date_tr": "7 Aralık 2025",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/RQ0W3616X3K5"
+  },
+  {
+    "id": "1769711524683",
+    "title": "Google Prompt Engineering",
+    "title_tr": "Google Prompt Mühendisliği",
+    "issuer": "Google",
+    "issuer_tr": "Google",
+    "date": "December 7, 2025",
+    "date_tr": "7 Aralık 2025",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/OTUW1G8L2QUP"
+  },
+  {
+    "id": "1769711607050",
+    "title": "Google Generative AI",
+    "title_tr": "Google Üretken Yapay Zeka",
+    "issuer": "Google",
+    "issuer_tr": "Google",
+    "date": "December 10, 2025",
+    "date_tr": "10 Aralık 2025",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    "credentialUrl": "https://www.coursera.org/account/accomplishments/verify/2YRH8E4MU7JG"
+  }
+]

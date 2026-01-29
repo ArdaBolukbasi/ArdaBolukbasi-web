@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1769713491014",
+    "title": "Speaking the Language of AI",
+    "title_tr": "Yapay Zekanın Dili",
+    "excerpt": "Sharing how I increased my coding speed by 200% using proper \"Prompt Engineering\" techniques learned from Google, and why AI is a superpower for developers, not a threat.",
+    "excerpt_tr": "Google'dan aldığım eğitimlerle, doğru \"Prompt\" yazarak kodlama hızımı nasıl %200 artırdığımı ve yapay zekanın yazılımcılar için neden bir tehdit değil, süper bir güç olduğunu paylaşıyorum.",
+    "content": "The answer to \"Will AI replace us?\" is clear: No. But developers who master AI tools will replace those who don't. Here are my top 3 strategies:\n\n1. Assign a Persona: Don't just ask for code. Tell AI: \"Act as a Senior Full Stack Developer and write clean, secure code.\"\n \n2. Create Context: Explain the project goal and stack (Next.js, Tailwind). More detail means better results.\n\n3. Debugging Partner: Don't just paste the error. Ask: \"What is the root cause and how do I fix this without losing performance?\"\n\nConclusion: AI is our co-pilot, not the captain.",
+    "content_tr": "Yazılım dünyasında sıkça duyduğumuz \"Yapay zeka işimizi elimizden alacak mı?\" sorusunun cevabı çok net: Hayır. Ancak AI araçlarını ustaca kullananlar, kullanmayanların önüne geçecek.\n\n1. Rol Atama (Persona): Yapay zekaya kim olduğunu söyleyin. \"Bana kod yaz\" yerine; \"Sen kıdemli bir Full Stack Geliştiricisin, clean code prensiplerine uygun yaz\" dediğinizde kalite artar.\n\n2. Bağlam (Context) Yaratma: Sorunu tek cümleyle anlatmayın. Projenin amacını, teknolojileri (Next.js, Tailwind vb.) belirtin. Ne kadar detay, o kadar nokta atışı çözüm.\n\n3. Hata Ayıklama Ortağı: Sadece hatayı yapıştırmayın. \"Bu hatanın kök nedeni nedir ve performansı düşürmeden nasıl çözerim?\" diye sorun.\n\nSonuç: Yapay zeka bizim kaptanımız değil, yardımcı pilotumuzdur",
+    "image": "/blog/prompt-muhendisligi.png",
+    "date": "2026-01-29",
+    "category": "Artificial Intelligence",
+    "category_tr": "Yapay Zeka",
+    "readTime": "3 min",
+    "readTime_tr": "3 dk"
+  }
+]
