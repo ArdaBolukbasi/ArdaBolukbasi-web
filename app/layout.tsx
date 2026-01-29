@@ -6,11 +6,12 @@ import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
-export const metadata: Metadata = {
-  title: "Arda Bölükbaşı - Portfolio",
-  description: "Software Developer Portfolio - Arda Bölükbaşı",
-  verification: {
-    google: "1PHJhKQEE6o1mOQVxmdcryakaPJaRLkEj8AB9gaH4XQ",
+title: "Arda Bölükbaşı | Software Developer",
+  description: "Arda Bölükbaşı - Yazılım Geliştirme Öğrencisi. Python, SQL, CustomTkinter ve Veri Bilimi alanında ölçeklenebilir projeler geliştiren Software Developer portfolyosu.",
+    keywords: ["Arda Bölükbaşı", "Arda Bolukbasi", "Software Developer", "Yazılım Geliştirici", "Python", "SQL", "Portfolio", "Istanbul", "İstanbul Aydın Üniversitesi", "CustomTkinter"],
+      authors: [{ name: "Arda Bölükbaşı" }],
+        verification: {
+  google: "1PHJhKQEE6o1mOQVxmdcryakaPJaRLkEj8AB9gaH4XQ",
   },
 };
 
