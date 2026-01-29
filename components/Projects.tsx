@@ -101,7 +101,7 @@ export function Projects() {
                 {loading ? (
                     <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
-                            <div key={i} className="aspect-[4/3] rounded-xl sm:rounded-2xl bg-zinc-900 border border-zinc-800 animate-pulse relative overflow-hidden">
+                            <div key={i} className="aspect-[3/2] sm:aspect-[4/3] rounded-xl sm:rounded-2xl bg-zinc-900 border border-zinc-800 animate-pulse relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-zinc-800/50 to-transparent skew-x-12 translate-x-[-150%] animate-shimmer" />
                                 <div className="absolute bottom-4 left-4 right-4">
                                     <div className="h-6 w-3/4 bg-zinc-800 rounded mb-2" />
@@ -129,7 +129,7 @@ export function Projects() {
                                 >
                                     <div className="relative">
                                         {/* Project Image */}
-                                        <div className="aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-zinc-800 relative shadow-xl sm:shadow-2xl border border-zinc-800/50 group-hover:border-purple-500/30 transition-colors">
+                                        <div className="aspect-[3/2] sm:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-zinc-800 relative shadow-xl sm:shadow-2xl border border-zinc-800/50 group-hover:border-purple-500/30 transition-colors">
                                             <Image
                                                 src={project.image}
                                                 alt={getLocalizedTitle(project)}
