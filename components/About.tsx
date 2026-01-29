@@ -125,27 +125,30 @@ export function About() {
 
                         {/* Personal Info Cards */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-                            {contactInfo.map((info) => (
-                                <motion.div
-                                    key={info.label}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className="bg-zinc-900/50 border border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:border-cyan-500/30 transition-colors"
-                                >
-                                    <div className="flex items-center gap-2 text-cyan-500 mb-1 sm:mb-2">
-                                        <info.icon size={14} />
-                                        <span className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-500">{info.label}</span>
-                                    </div>
-                                    {info.href ? (
-                                        <a href={info.href} className="text-white font-medium hover:text-cyan-400 transition-colors text-xs sm:text-sm break-all">
-                                            {info.value}
-                                        </a>
-                                    ) : (
-                                        <span className="text-white font-medium text-xs sm:text-sm">{info.value}</span>
-                                    )}
-                                </motion.div>
-                            ))}
+                            {contactInfo.map((info) => {
+                                const CardWrapper = info.href ? 'a' : 'div';
+                                return (
+                                    <motion.div
+                                        key={info.label}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                    >
+                                        <CardWrapper
+                                            href={info.href || undefined}
+                                            className={`block bg-zinc-900/50 border border-zinc-800 rounded-lg sm:rounded-xl p-3 sm:p-4 hover:border-cyan-500/30 transition-colors ${info.href ? 'cursor-pointer' : ''}`}
+                                        >
+                                            <div className="flex items-center gap-2 text-cyan-500 mb-1 sm:mb-2">
+                                                <info.icon size={14} />
+                                                <span className="text-[10px] sm:text-xs uppercase tracking-wider text-zinc-500">{info.label}</span>
+                                            </div>
+                                            <span className={`text-white font-medium text-xs sm:text-sm break-all ${info.href ? 'hover:text-cyan-400' : ''}`}>
+                                                {info.value}
+                                            </span>
+                                        </CardWrapper>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
 
                         {/* Info Badges */}
