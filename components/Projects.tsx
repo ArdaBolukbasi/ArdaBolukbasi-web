@@ -154,8 +154,8 @@ export function Projects() {
                                             {/* Overlay - Always visible on mobile */}
                                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                                                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4">
-                                                    <h3 className="text-base sm:text-xl font-bold text-white mb-1 sm:mb-2">{getLocalizedTitle(project)}</h3>
-                                                    <p className="text-zinc-400 text-xs sm:text-sm line-clamp-2">{getLocalizedDescription(project)}</p>
+                                                    <h3 className="text-base sm:text-xl font-bold text-white mb-0 sm:mb-2">{getLocalizedTitle(project)}</h3>
+                                                    <p className="hidden sm:block text-zinc-400 text-xs sm:text-sm line-clamp-2">{getLocalizedDescription(project)}</p>
                                                 </div>
                                             </div>
                                         </div>
