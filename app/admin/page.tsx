@@ -101,7 +101,9 @@ export default function AdminPage() {
 
     // Certificates UI State
     const [editingCert, setEditingCert] = useState<Certificate | null>(null);
+    const [editCertGalleryUrl, setEditCertGalleryUrl] = useState("");
     const [newCert, setNewCert] = useState<Partial<Certificate>>({});
+    const [newCertGalleryUrl, setNewCertGalleryUrl] = useState("");
 
     const handleLogin = (e: React.FormEvent) => {
         e.preventDefault();
@@ -143,6 +145,40 @@ export default function AdminPage() {
         setEditingProject({
             ...editingProject,
             gallery: (editingProject.gallery || []).filter((_, i) => i !== index)
+        });
+    };
+
+    // Cert Gallery Handlers
+    const handleAddCertGalleryImage = () => {
+        if (!newCertGalleryUrl.trim()) return;
+        setNewCert({
+            ...newCert,
+            gallery: [...(newCert.gallery || []), newCertGalleryUrl.trim()]
+        });
+        setNewCertGalleryUrl("");
+    };
+
+    const handleRemoveCertGalleryImage = (index: number) => {
+        setNewCert({
+            ...newCert,
+            gallery: (newCert.gallery || []).filter((_, i) => i !== index)
+        });
+    };
+
+    const handleAddEditCertGalleryImage = () => {
+        if (!editCertGalleryUrl.trim() || !editingCert) return;
+        setEditingCert({
+            ...editingCert,
+            gallery: [...(editingCert.gallery || []), editCertGalleryUrl.trim()]
+        });
+        setEditCertGalleryUrl("");
+    };
+
+    const handleRemoveEditCertGalleryImage = (index: number) => {
+        if (!editingCert) return;
+        setEditingCert({
+            ...editingCert,
+            gallery: (editingCert.gallery || []).filter((_, i) => i !== index)
         });
     };
 
@@ -891,10 +927,37 @@ export default function AdminPage() {
                                                 value={editingCert.image}
                                                 onChange={(url) => setEditingCert({ ...editingCert, image: url })}
                                                 folder="certificates"
-                                                placeholder="Certificate Image URL"
+                                                placeholder="Cover Image URL"
                                             />
                                         </div>
-                                        <input type="text" placeholder="Credential URL (optional)" value={editingCert.credentialUrl || ""} onChange={e => setEditingCert({ ...editingCert, credentialUrl: e.target.value })} className="w-full bg-black/50 border border-zinc-700 rounded-lg p-2.5 text-sm outline-none" />
+
+                                        {/* Gallery */}
+                                        <div className="mb-2">
+                                            <label className="text-xs text-zinc-500 uppercase mb-1 block">Gallery</label>
+                                            <div className="flex gap-2 mb-2">
+                                                <div className="flex-1">
+                                                    <ImageUploader
+                                                        value={editCertGalleryUrl}
+                                                        onChange={setEditCertGalleryUrl}
+                                                        folder="certificates/gallery"
+                                                        placeholder="Add image URL or Upload"
+                                                    />
+                                                </div>
+                                                <button type="button" onClick={handleAddEditCertGalleryImage} className="px-3 bg-yellow-600 rounded-lg"><Plus size={14} /></button>
+                                            </div>
+                                            {(editingCert.gallery?.length || 0) > 0 && (
+                                                <div className="space-y-1 max-h-24 overflow-y-auto">
+                                                    {editingCert.gallery?.map((url, i) => (
+                                                        <div key={i} className="flex items-center gap-2 bg-zinc-800/50 rounded p-1 text-xs">
+                                                            <span className="truncate flex-1">{url}</span>
+                                                            <button onClick={() => handleRemoveEditCertGalleryImage(i)} className="text-red-400"><X size={12} /></button>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        <input type="text" placeholder="Credential URL (optional)" value={editingCert.credentialUrl || ""} onChange={e => setEditingCert({ ...editingCert, credentialUrl: e.target.value })} className="w-full bg-black/50 border border-zinc-700 rounded-lg p-2.5 text-sm outline-none mb-2" />
                                     </div>
 
                                     <div className="flex gap-2 mt-2">
@@ -939,11 +1002,37 @@ export default function AdminPage() {
                                                 value={newCert.image || ""}
                                                 onChange={(url) => setNewCert({ ...newCert, image: url })}
                                                 folder="certificates"
-                                                placeholder="Certificate Image URL"
+                                                placeholder="Cover Image URL"
                                             />
                                         </div>
 
-                                        <input type="text" placeholder="Credential URL (optional)" value={newCert.credentialUrl || ""} onChange={e => setNewCert({ ...newCert, credentialUrl: e.target.value })} className="w-full bg-black/50 border border-zinc-700 rounded-lg p-2.5 text-sm outline-none" />
+                                        {/* Gallery */}
+                                        <div className="mb-2">
+                                            <label className="text-xs text-zinc-500 uppercase mb-1 block">Gallery</label>
+                                            <div className="flex gap-2 mb-2">
+                                                <div className="flex-1">
+                                                    <ImageUploader
+                                                        value={newCertGalleryUrl}
+                                                        onChange={setNewCertGalleryUrl}
+                                                        folder="certificates/gallery"
+                                                        placeholder="Add image URL or Upload"
+                                                    />
+                                                </div>
+                                                <button type="button" onClick={handleAddCertGalleryImage} className="px-3 bg-yellow-600 rounded-lg"><Plus size={14} /></button>
+                                            </div>
+                                            {(newCert.gallery?.length || 0) > 0 && (
+                                                <div className="space-y-1 max-h-24 overflow-y-auto">
+                                                    {newCert.gallery?.map((url, i) => (
+                                                        <div key={i} className="flex items-center gap-2 bg-zinc-800/50 rounded p-1 text-xs">
+                                                            <span className="truncate flex-1">{url}</span>
+                                                            <button onClick={() => handleRemoveCertGalleryImage(i)} className="text-red-400"><X size={12} /></button>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        <input type="text" placeholder="Credential URL (optional)" value={newCert.credentialUrl || ""} onChange={e => setNewCert({ ...newCert, credentialUrl: e.target.value })} className="w-full bg-black/50 border border-zinc-700 rounded-lg p-2.5 text-sm outline-none mb-2" />
                                     </div>
 
                                     <button onClick={async () => {

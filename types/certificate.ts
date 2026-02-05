@@ -7,6 +7,7 @@ export interface Certificate {
     date: string;
     date_tr?: string;
     image: string;
+    gallery?: string[];
     credentialUrl?: string;
     order?: number;
 }

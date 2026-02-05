@@ -13,6 +13,7 @@ export function Certificates() {
     const [certificates, setCertificates] = useState<Certificate[]>([]);
     const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [galleryIndex, setGalleryIndex] = useState(0);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -36,6 +37,7 @@ export function Certificates() {
     const openCertificate = (cert: Certificate, index: number) => {
         setSelectedCert(cert);
         setCurrentIndex(index);
+        setGalleryIndex(0);
     };
 
     const closeCertificate = () => {
@@ -52,6 +54,21 @@ export function Certificates() {
         const newIndex = (currentIndex - 1 + certificates.length) % certificates.length;
         setCurrentIndex(newIndex);
         setSelectedCert(certificates[newIndex]);
+        setGalleryIndex(0);
+    };
+
+    const nextGalleryImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        if (!selectedCert) return;
+        const images = [selectedCert.image, ...(selectedCert.gallery || [])];
+        setGalleryIndex((prev) => (prev + 1) % images.length);
+    };
+
+    const prevGalleryImage = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        if (!selectedCert) return;
+        const images = [selectedCert.image, ...(selectedCert.gallery || [])];
+        setGalleryIndex((prev) => (prev - 1 + images.length) % images.length);
     };
 
 
@@ -189,13 +206,56 @@ export function Certificates() {
                                 </>
                             )}
 
-                            {/* Certificate Image */}
-                            <div className="aspect-[16/10] overflow-hidden">
-                                <img
-                                    src={selectedCert.image}
-                                    alt={getLocalizedTitle(selectedCert)}
-                                    className="w-full h-full object-contain bg-black"
-                                />
+                            {/* Certificate Image or Gallery */}
+                            <div className="aspect-[16/10] overflow-hidden relative group/image">
+                                <AnimatePresence mode="wait">
+                                    {(() => {
+                                        const displayImages = (selectedCert.gallery && selectedCert.gallery.length > 0)
+                                            ? selectedCert.gallery
+                                            : [selectedCert.image];
+                                        return (
+                                            <>
+                                                <motion.img
+                                                    key={galleryIndex}
+                                                    initial={{ opacity: 0, x: 20 }}
+                                                    animate={{ opacity: 1, x: 0 }}
+                                                    exit={{ opacity: 0, x: -20 }}
+                                                    transition={{ duration: 0.3 }}
+                                                    src={displayImages[galleryIndex]}
+                                                    alt={getLocalizedTitle(selectedCert)}
+                                                    className="w-full h-full object-contain bg-black"
+                                                />
+
+                                                {/* Gallery Navigation */}
+                                                {displayImages.length > 1 && (
+                                                    <>
+                                                        <div className="absolute bottom-4 right-4 bg-black/50 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm z-10">
+                                                            {galleryIndex + 1} / {displayImages.length}
+                                                        </div>
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                setGalleryIndex(prev => (prev - 1 + displayImages.length) % displayImages.length);
+                                                            }}
+                                                            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-opacity"
+                                                        >
+                                                            <ChevronLeft size={20} />
+                                                        </button>
+                                                        <button
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                setGalleryIndex(prev => (prev + 1) % displayImages.length);
+                                                            }}
+                                                            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/50 hover:bg-black/70 rounded-full text-white opacity-0 group-hover/image:opacity-100 transition-opacity"
+                                                        >
+                                                            <ChevronRight size={20} />
+                                                        </button>
+                                                    </>
+                                                )}
+                                            </>
+                                        );
+                                    })()}
+                                </AnimatePresence>
                             </div>
 
                             {/* Info */}

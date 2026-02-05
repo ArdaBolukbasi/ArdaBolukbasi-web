@@ -144,9 +144,8 @@ export function Projects() {
                                                 </span>
                                             </div>
 
-                                            {/* Featured Badge */}
                                             {project.featured && (
-                                                <div className="absolute top-2 sm:top-3 right-2 sm:right-3 px-2 sm:px-3 py-0.5 sm:py-1 bg-yellow-500 text-black text-[10px] sm:text-xs font-bold rounded-full uppercase">
+                                                <div className="hidden md:block absolute top-2 sm:top-3 right-2 sm:right-3 px-2 sm:px-3 py-0.5 sm:py-1 bg-yellow-500 text-black text-[10px] sm:text-xs font-bold rounded-full uppercase">
                                                     Featured
                                                 </div>
                                             )}
@@ -155,13 +154,15 @@ export function Projects() {
                                             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300">
                                                 <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 overflow-hidden">
                                                     <h3 className="text-sm sm:text-xl font-bold text-white mb-0 sm:mb-2 line-clamp-1 sm:line-clamp-2">{getLocalizedTitle(project)}</h3>
-                                                    <p className="hidden sm:block text-zinc-400 text-sm overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical' }}>{getLocalizedDescription(project)}</p>
+                                                    <div className="hidden md:block">
+                                                        <p className="text-zinc-400 text-sm overflow-hidden line-clamp-2">{getLocalizedDescription(project)}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         {/* Tech Stack Pills */}
-                                        <div className="flex flex-wrap gap-1.5 sm:gap-2 mt-2 sm:mt-3 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity">
+                                        <div className="hidden sm:flex flex-wrap gap-1.5 sm:gap-2 mt-2 sm:mt-3 opacity-0 group-hover:opacity-100 transition-opacity">
                                             {project.technologies.slice(0, 4).map(tech => (
                                                 <span key={tech} className="text-[10px] sm:text-xs text-zinc-400 bg-zinc-900 px-2 py-0.5 sm:py-1 rounded-md border border-zinc-800">
                                                     {tech}

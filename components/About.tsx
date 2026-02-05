@@ -11,7 +11,7 @@ export function About() {
     const stats = [
         { value: "4+", label: t("about.yearsCoding") },
         { value: "10+", label: t("about.projectsCount") },
-        { value: "3", label: t("about.certificates") },
+        { value: "4", label: t("about.certificates") },
     ];
 
     const technologies = [
@@ -152,7 +152,7 @@ export function About() {
                         </div>
 
                         {/* Info Badges */}
-                        <div className="flex flex-wrap gap-2 sm:gap-4">
+                        <div className="flex flex-wrap gap-2 sm:gap-4 justify-center">
                             <div className="flex items-center gap-2 bg-zinc-900 border border-zinc-800 rounded-full px-3 sm:px-4 py-1.5 sm:py-2">
                                 <GraduationCap size={14} className="text-cyan-500" />
                                 <span className="text-xs sm:text-sm text-zinc-300">{t("about.university")}</span>
@@ -197,7 +197,7 @@ export function About() {
                         </div>
 
                         {/* Social Links */}
-                        <div className="flex gap-3 sm:gap-4 pt-2 sm:pt-4">
+                        <div className="flex gap-3 sm:gap-4 pt-2 sm:pt-4 justify-center">
                             <a
                                 href="https://github.com/ArdaBolukbasi"
                                 target="_blank"
