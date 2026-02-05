@@ -11,7 +11,7 @@ export function About() {
     const stats = [
         { value: "4+", label: t("about.yearsCoding") },
         { value: "10+", label: t("about.projectsCount") },
-        { value: "4", label: t("about.certificates") },
+        { value: "5", label: t("about.certificates") },
     ];
 
     const technologies = [
